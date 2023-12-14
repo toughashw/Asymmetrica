@@ -3,7 +3,7 @@ services:
   dashboard:
     image: disitlab/dashboard-builder:v4
     ports:
-      - "80:80"
+      - "8081:8081"
     volumes:
        - ./dashboard-builder-conf:/var/www/html/dashboardSmartCity/conf
        - ./notificator-conf:/var/www/html/notificator/conf
@@ -24,12 +24,12 @@ services:
       OWN_LDAPBASEDN: "dc=ldap,dc=organization,dc=com"
     depends_on:
       - dashboarddb
-      - keycloak 
+      - keycloak
   dashboard-backend:
     image: disitlab/dashboard-backend:v0
     volumes:
       - ./dashboard-backend-conf/config.properties:/usr/app/config.properties
-    depends_on: 
+    depends_on:
       - dashboarddb
   dashboard-cron:
     image: disitlab/dashboard-builder:v4
@@ -57,7 +57,7 @@ services:
       "config.kpi.dictionary": "http://dashboard/processloader/api/dictionary/"
       "config.kpi.authentication.clientid": "js-kpi-client"
       "config.grp.authentication.clientid": "js-grp-client"
-      "grpsensors.datasource.url": "http://dashboard/dashboardSmartCity/api/sensors.php"
+            "grpsensors.datasource.url": "http://dashboard/dashboardSmartCity/api/sensors.php"
       "grp.url": "http://dashboard/datamanager/grp/?id=%d"
 #     "spring.cache.jcache.config": "classpath:ehcache.xml"
       "kafka.bootstrapAddress": "kafka:9092"
@@ -70,7 +70,7 @@ services:
       - dashboarddb
     depends_on:
       - dashboarddb
-      - keycloak 
+      - keycloak
   wsserver:
     image: disitlab/websocketserver:v2
     ports:
@@ -79,7 +79,7 @@ services:
       - ./dashboard-builder-conf:/websocketserver/conf
     depends_on:
       - dashboarddb
-      - keycloak 
+      - keycloak
   synoptics:
     image: disitlab/synoptics:v0
     volumes:
@@ -107,7 +107,6 @@ services:
     depends_on:
       - dashboard
       - keycloak
-
   zookeeper:
     image: zookeeper
     ports:
@@ -116,7 +115,7 @@ services:
       - zkdata:/data
   kafka:
     image: bitnami/kafka:latest
-    ports:
+  ports:
       - "9092:9092"
       - "9093:9093"
     environment:
@@ -128,7 +127,7 @@ services:
         - KAFKA_INTER_BROKER_LISTENER_NAME=CLIENT
     volumes:
       - kafka:/bitnami/kafka
-    depends_on: 
+    depends_on:
       - zookeeper
 
 # IOTOBSF ######################################################
@@ -137,7 +136,7 @@ services:
     depends_on:
       - orion
     ports:
-      - "8443:8443"
+      - "8444:8444"
     volumes:
       - ./orionbrokerfilter-logs:/usr/local/tomcat/logs/orionbrokerfilter
       - ./orionbrokerfilter-conf:/usr/local/tomcat/credentials
@@ -171,7 +170,7 @@ services:
 
 #KBSSM ################################################################      
   servicemap:
-    image: disitlab/servicemap:v1 
+    image: disitlab/servicemap:v1
 #    image: tomcat:9.0.26-jdk8-openjdk-slim
     volumes:
       - ./servicemap-conf:/root/servicemap
@@ -181,11 +180,11 @@ services:
       - ./servicemap-superservicemap-conf/settings.xml:/usr/local/tomcat/settings.xml
 #    environment:
     ports:
-      - 8090:8080
+      - 8091:8080
     depends_on:
       - virtuoso-kb
       - dashboarddb
-      - keycloak 
+      - keycloak
   virtuoso-kb:
     image: tenforce/virtuoso:1.3.1-virtuoso7.2.1
     environment:
@@ -195,8 +194,8 @@ services:
       - ./servicemap-conf:/root/servicemap
       - virtuoso:/data
     ports:
-      - "8890:8890"      
-      - "1111:1111"
+      - "8891:8891"
+      - "1112:1112"
 #IOTDES ################################################################      
   nifi:
     image: apache/nifi:1.9.2
@@ -212,14 +211,14 @@ services:
     environment:
       - 'path.repo=/elastic-bkup'
     ports:
-      - "9200:9200"      
+      - "9200:9200"
     volumes:
       - elastic-data:/usr/share/elasticsearch/data
-      - ./elastic-bkup:/elastic-bkup 
+      - ./elastic-bkup:/elastic-bkup
   kibana:
     image: kibana:6.8.5
     ports:
-      - "5601:5601"      
+      - "5601:5601"
 
 ######################################################################      
   dashboarddb:
@@ -233,7 +232,7 @@ services:
       - ./database/profiledb.sql:/docker-entrypoint-initdb.d/4_init.sql
       - ./database/notificator.sql:/docker-entrypoint-initdb.d/5_init.sql
       - ./database/iot-directory.sql:/docker-entrypoint-initdb.d/6_init.sql
-      - ./database/servicemap.sql:/docker-entrypoint-initdb.d/7_init.sql
+    - ./database/servicemap.sql:/docker-entrypoint-initdb.d/7_init.sql
       - ./database/superservicemap.sql:/docker-entrypoint-initdb.d/8_init.sql
       - ./database/processloader.sql:/docker-entrypoint-initdb.d/9_init.sql
     environment:
@@ -242,12 +241,11 @@ services:
       MYSQL_ROOT_PASSWORD: "rootpwd"
       MYSQL_USER: 'user'
       MYSQL_PASSWORD: 'passwordx'
-      MYSQL_DATABASE: 'Dashboard'      
+      MYSQL_DATABASE: 'Dashboard'
     ports:
-      - "3306:3306"
-
+      - "3307:3307"
   ldap-server:
-    image: disitlab/preconf-openldap:v2 
+    image: disitlab/preconf-openldap:v2
 #    image: osixia/openldap
     environment:
       LDAP_ORGANISATION: "organization"
@@ -265,14 +263,71 @@ services:
     depends_on:
       - "ldap-server"
   keycloak:
-      image: disitlab/preconf-keycloak:v3 
+      image: disitlab/preconf-keycloak:v3
 #      image: jboss/keycloak:4.8.3.Final 
       command: ["-Djboss.socket.binding.port-offset=8"]
       ports:
         - "8088:8088"
       environment:
         KEYCLOAK_USER: admin
-        KEYCLOAK_PASSWORD: admin 
+        KEYCLOAK_PASSWORD: admin
+      depends_on:
+        - ldap-server
+volumes:
+  dashboarddb:
+  dashboarddb2:
+  dashboard-img:
+  virtuoso:
+  mongodb:
+  elastic-data:
+  ckan_conf:
+  ckan_home:
+  ckan_storage:
+  pg_data:
+  zkdata:
+  kafka:
+      - ./database/notificator.sql:/docker-entrypoint-initdb.d/5_init.sql
+      - ./database/iot-directory.sql:/docker-entrypoint-initdb.d/6_init.sql
+      - ./database/servicemap.sql:/docker-entrypoint-initdb.d/7_init.sql
+      - ./database/superservicemap.sql:/docker-entrypoint-initdb.d/8_init.sql
+            - ./database/processloader.sql:/docker-entrypoint-initdb.d/9_init.sql
+    environment:
+      TZ: "Europe/Rome"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+      MYSQL_ROOT_PASSWORD: "rootpwd"
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'passwordx'
+      MYSQL_DATABASE: 'Dashboard'
+    ports:
+      - "3307:3307"
+
+  ldap-server:
+    image: disitlab/preconf-openldap:v2
+#    image: osixia/openldap
+    environment:
+      LDAP_ORGANISATION: "organization"
+      LDAP_DOMAIN: "ldap.organization.com"
+      LDAP_ADMIN_PASSWORD: "secret"
+    ports:
+      - "389:389"
+      - "636:636"
+  myldap:
+    image: osixia/phpldapadmin
+    environment:
+      PHPLDAPADMIN_LDAP_HOSTS: "ldap-server"
+    ports:
+      - "6443:443"
+    depends_on:
+      - "ldap-server"
+  keycloak:
+      image: disitlab/preconf-keycloak:v3
+#      image: jboss/keycloak:4.8.3.Final 
+      command: ["-Djboss.socket.binding.port-offset=8"]
+      ports:
+        - "8088:8088"
+      environment:
+        KEYCLOAK_USER: admin
+        KEYCLOAK_PASSWORD: admin
       depends_on:
         - ldap-server
 volumes:
