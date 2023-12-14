@@ -1,8 +1,8 @@
 # Snap4City FOR Asymmetrica
 
-[Official Link] -(https://www.snap4city.org/drupal/node/738) 
-[Official Guide] - (https://www.snap4city.org/download/video/TroubleShooting-MicroX-on-premise.pdf)
-[Official GitHub] - (https://github.com/disit/snap4city-docker/tree/master/DataCity-Small)
+- [Official Link] -->(https://www.snap4city.org/drupal/node/738) 
+- [Official Guide] --> (https://www.snap4city.org/download/video/TroubleShooting-MicroX-on-premise.pdf)
+- [Official GitHub] --> (https://github.com/disit/snap4city-docker/tree/master/DataCity-Small)
 
 > Startup | Clone Repo
 ```
