@@ -3,7 +3,7 @@ services:
   dashboard:
     image: disitlab/dashboard-builder:v4
     ports:
-      - "8081:8081"
+      - "81:81"
     volumes:
        - ./dashboard-builder-conf:/var/www/html/dashboardSmartCity/conf
        - ./notificator-conf:/var/www/html/notificator/conf
