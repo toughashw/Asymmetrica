@@ -1,29 +1,24 @@
-# Snap4City FOR Asymmetrica
+# Docker & Services
 
-- [Official Link] -->(https://www.snap4city.org/drupal/node/738) 
-- [Official Guide] --> (https://www.snap4city.org/download/video/TroubleShooting-MicroX-on-premise.pdf)
-- [Official GitHub] --> (https://github.com/disit/snap4city-docker/tree/master/DataCity-Small)
-
-> Startup | Clone Repo
+> Docker 
 ```
-git clone https://github.com/disit/snap4city-docker
 ```
-> Entry in Dir
+> Docker Compose 
 ```
-cd snap4city-docker/DataCity-Small
 ```
 
-> Permissions Dirs/Files & MAX Count
+> Mosquitto
 ```
-sudo ./setup.sh
+docker run -it -d --name mos1 -p 1883:1883 -v /etc/mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf eclipse-mosquitto:2
+```
+> NodeRED
+```
+```
+> Grafana
+```
+```
+> ChirpStack
+```
 ```
 
-> Pulling Docker Containers 
-```
-docker-compose up -d
-```
 
-> Launch Docker Services
-```
-sudo ./post-setup.sh
-```
