@@ -1,29 +1,4 @@
-# Snap4City FOR Asymmetrica
+# Norvi IIoT 
 
-- [Official Link] -->(https://www.snap4city.org/drupal/node/738) 
-- [Official Guide] --> (https://www.snap4city.org/download/video/TroubleShooting-MicroX-on-premise.pdf)
-- [Official GitHub] --> (https://github.com/disit/snap4city-docker/tree/master/DataCity-Small)
-
-> Startup | Clone Repo
-```
-git clone https://github.com/disit/snap4city-docker
-```
-> Entry in Dir
-```
-cd snap4city-docker/DataCity-Small
-```
-
-> Permissions Dirs/Files & MAX Count
-```
-sudo ./setup.sh
-```
-
-> Pulling Docker Containers 
-```
-docker-compose up -d
-```
-
-> Launch Docker Services
-```
-sudo ./post-setup.sh
-```
+- [Official Link] -->(https://norvi.lk/norvi-iiot-industrial-iot-node-esp/#IIOT_Models) 
+- [Official Link] --> (https://norvi.lk/docs)
