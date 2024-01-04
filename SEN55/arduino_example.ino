@@ -1,4 +1,3 @@
-
 /*
  * I2C-Generator: 0.3.0
  * Yaml Version: 2.1.3
