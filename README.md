@@ -4,4 +4,4 @@
 - [Official Link] --> (https://norvi.lk/docs)
 
 
-Instructables Guide - [https://www.instructables.com/Getting-Started-With-Norvi-Devices/]
+- [Instructables Guide] -->(https://www.instructables.com/Getting-Started-With-Norvi-Devices/)
