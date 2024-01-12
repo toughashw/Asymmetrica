@@ -4,5 +4,8 @@
 
 - Hackster.io Guide --> (https://www.hackster.io/iconicpc09/getting-started-with-norvi-devices-821639)
 
+- Change Adafruit Logo --> (https://www.instructables.com/Change-Adafruit-Library-OLED-Logo/)
+
+
 
 
