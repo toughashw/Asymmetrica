@@ -7,11 +7,11 @@
 
 ModbusMaster node;
 
-const char* ssid = "il_tuo_ssid";
-const char* password = "la_tua_password";
-const char* broker = "indirizzo_broker";
+const char* ssid = "FASTWEB-Ubx8JX";
+const char* password = "TGqfj9GTK4";
+const char* broker = "38.242.140.25";
 const int porta_broker = 1883;
-const char* nome_client = "ESP32Client";
+const char* nome_client = "NorviESP32";
 
 WiFiClient espClient;
 PubSubClient client(espClient);
