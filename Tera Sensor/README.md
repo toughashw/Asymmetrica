@@ -1,4 +1,4 @@
-# Sensirion SENSORS
+# TERA SENSOR
 
 >  NEXT PM
 - [https://tera-sensor.com/product/nextpm/]

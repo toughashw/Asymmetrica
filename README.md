@@ -1,4 +1,4 @@
-# Sensirion SENSORS
+# SENSIRION SENSORS
 
 >  SEN55
 - [https://sensirion.com/products/catalog/SEN55]
