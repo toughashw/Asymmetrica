@@ -1,4 +1,4 @@
-# Video EC Boards
+# EC Video Boards
 
 > NVIDIA P3541
 - Setup Guide --> [https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-2gb-devkit#intro]
