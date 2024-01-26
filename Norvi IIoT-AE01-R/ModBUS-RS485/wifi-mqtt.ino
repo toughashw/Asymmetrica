@@ -59,7 +59,7 @@ void loop() {
   // Il tuo codice può andare qui
   
   // Esempio di pubblicazione su un topic MQTT
-  client.publish("norvi/AE01-R/test", "Ciao dal tuo Norvi Controller!");
+  client.publish("norvi/AE01-R/test", "Ciao dal tuo Norvi AE01-R!");
 
   // Mantieni la connessione al broker MQTT
   client.loop();
