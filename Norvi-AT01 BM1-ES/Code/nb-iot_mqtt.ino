@@ -5,9 +5,9 @@
 #define RX0 4
 #define TX0 5
 
-const char apn[] = "APN_del_tuo_provider";  
-const char user[] = "nome_utente"; 
-const char pass[] = "password";  
+const char apn[] = "iot.1nce.net";  
+const char user[] = ""; 
+const char pass[] = "";  
 
 const char* mqtt_server = "38.242.140.25";
 
