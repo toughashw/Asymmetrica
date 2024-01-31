@@ -47,6 +47,7 @@ https://download.nomachine.com/download/8.11/Linux/nomachine_8.11.3_4_amd64.deb
 
 Install NOMACHINE
 ```
+sudo wget https://www.nomachine.com/free/arm/v8/deb -O nomachine.deb
 sudo dpkg -i nomachine_8.11.3_4_amd64.deb
 ```
 
