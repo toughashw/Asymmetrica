@@ -1,8 +1,13 @@
 # Edge Computing Video Boards
 
 > NVIDIA P3541
+
+hostname: asymmetrica-nvidia-p3541
+username: asymmetrica
+
 - Setup Guide --> [https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-2gb-devkit#intro]
 - Firmware Image --> [https://developer.nvidia.com/jetson-nano-2gb-sd-card-image]
+
 
 
 > AUVIDEA JNX30D
@@ -19,6 +24,10 @@ sudo bash ./flashcmd.txt
 ```
 
 >  PATRIOT P300
+
+hostname: asymmetrica-partiot-p300
+username: asymmetrica
+
 - Setup Guide --> [https://wiki.seeedstudio.com/reComputer_J1020_A206_Flash_JetPack/#flashing-jetpack-os-via-command-line]
 - Firmware Image --> [https://developer.nvidia.com/downloads/embedded/l4t/r32_release_v7.4/t210/jetson-210_linux_r32.7.4_aarch64.tbz2]
 - Filesystem --> [https://developer.nvidia.com/downloads/embedded/l4t/r32_release_v7.4/t210/tegra_linux_sample-root-filesystem_r32.7.4_aarch64.tbz2]
