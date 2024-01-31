@@ -20,7 +20,9 @@ Install RemoteIT
 ```
 sudo dpkg -i remoteit-5.1.1.arm64.jetson.deb
 ```
-> VNC (first solution NOMACHINE)
+> VNC (first solution NOMACHINE) 
+[https://kb.nomachine.com/AR02R01074]
+
 - Check NOMACHINE versions
 ```
 https://downloads.nomachine.com/linux/?id=1
@@ -37,6 +39,8 @@ sudo dpkg -i nomachine_8.11.3_4_amd64.deb
 ```
 
 > VNC (second solution REALVNC)
+[https://omar2cloud.github.io/rasp/realvnc/]
+
 - Check REALVNC versions
 ```
 https://archive.raspberrypi.org/debian/pool/main/r/realvnc-vnc/
