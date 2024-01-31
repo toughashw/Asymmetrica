@@ -20,6 +20,18 @@ Install RemoteIT
 ```
 sudo dpkg -i remoteit-5.1.1.arm64.jetson.deb
 ```
+
+
+# VNC Preliminar Operations
+```
+mkdir -p ~/.config/autostart
+cp /usr/share/applications/vino-server.desktop ~/.config/autostart/.
+gsettings set org.gnome.Vino prompt-enabled false
+gsettings set org.gnome.Vino require-encryption false
+gsettings set org.gnome.Vino authentication-methods "['vnc']"
+gsettings set org.gnome.Vino vnc-password $(echo -n 'la mia password'|base64)
+```
+
 > VNC (first solution NOMACHINE) 
 [https://kb.nomachine.com/AR02R01074]
 
