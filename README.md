@@ -1,4 +1,4 @@
-# EC Video Boards
+# Edge Computing Video Boards
 
 > NVIDIA P3541
 - Setup Guide --> [https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-2gb-devkit#intro]
@@ -13,4 +13,6 @@
 - Firmware Image --> [https://developer.nvidia.com/downloads/embedded/l4t/r36_release_v2.0/release/jetson_linux_r36.2.0_aarch64.tbz2]
 - Filesystem --> [https://developer.nvidia.com/downloads/embedded/l4t/r36_release_v2.0/release/tegra_linux_sample-root-filesystem_r36.2.0_aarch64.tbz2]
 
-
+> Setup SSH & VNC
+- Remote.it ---> [https://www.remote.it/getting-started/nvidia-jetson]
+- SSH ---> [https://gurviraj.hashnode.dev/how-to-ssh-to-the-remote-jetson-nano-developer-kit]
