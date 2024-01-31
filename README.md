@@ -10,7 +10,7 @@
 - Firmware Version --> [https://auvidea.eu/firmware/]
 - Firmware Image --> [https://auvidea.eu/download/firmware/Jetpack_4.6/Jetpack_4_6_TX2NX_JNX30.tar.bz2]
 
-- Download & Installation
+Download & Installation
 ```
 tar xvzf bootloader.tar.gz
 cd ./bootloader
@@ -23,7 +23,7 @@ sudo bash ./flashcmd.txt
 - Firmware Image --> [https://developer.nvidia.com/downloads/embedded/l4t/r32_release_v7.4/t210/jetson-210_linux_r32.7.4_aarch64.tbz2]
 - Filesystem --> [https://developer.nvidia.com/downloads/embedded/l4t/r32_release_v7.4/t210/tegra_linux_sample-root-filesystem_r32.7.4_aarch64.tbz2]
 
-- Packages & IMG Creation
+Packages & IMG Creation
 ```
 tar xf jetson-210_linux_r32.7.4_aarch64.tbz2
 cd Linux_for_Tegra/rootfs/
