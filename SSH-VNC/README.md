@@ -42,7 +42,7 @@ https://downloads.nomachine.com/linux/?id=1
 
 - Download NOMACHINE .deb for ARM64
 ```
-https://download.nomachine.com/download/8.11/Linux/nomachine_8.11.3_4_amd64.deb
+sudo wget https://download.nomachine.com/download/8.11/Linux/nomachine_8.11.3_4_amd64.deb
 ```
 
 Install NOMACHINE

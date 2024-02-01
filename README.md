@@ -2,12 +2,12 @@
 
 > NVIDIA P3541
 
+- name: Asymmetrica
 - hostname: asymmetrica-nvidia-p3541
 - username: asymmetrica
 
 - Setup Guide --> [https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-2gb-devkit#intro]
 - Firmware Image --> [https://developer.nvidia.com/jetson-nano-2gb-sd-card-image]
-
 
 
 > AUVIDEA JNX30D
@@ -25,7 +25,8 @@ sudo bash ./flashcmd.txt
 
 >  PATRIOT P300
 
-- hostname: asymmetrica-patriot-p300
+- name: Asymmetrica
+- hostname: patriot-p300
 - username: asymmetrica
 
 - Setup Guide --> [https://wiki.seeedstudio.com/reComputer_J1020_A206_Flash_JetPack/#flashing-jetpack-os-via-command-line]
