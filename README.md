@@ -3,7 +3,7 @@
 > NVIDIA P3541
 
 - name: Asymmetrica
-- hostname: asymmetrica-nvidia-p3541
+- hostname: nvidia-p3541
 - username: asymmetrica
 
 - Setup Guide --> [https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-2gb-devkit#intro]
