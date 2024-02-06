@@ -73,3 +73,25 @@ Install REALVNC SERVER/VIEWER
 sudo dpkg -i realvnc-vnc-server_7.5.1.50075_arm64.deb
 sudo dkpg -i realvnc-vnc-viewer_7.5.1.50075_arm64.deb
 ```
+
+> TightVNC (third solution ThightVNC)
+```
+sudo apt-get update
+sudo apt-get install xfce4
+```
+
+```
+sudo apt-get install tightvncserver
+```
+
+```
+tightvncserver
+```
+
+```
+echo "tightvncserver" >> ~/.bashrc
+```
+
+```
+tightvncserver :5900 -geometry 1280x720
+```
