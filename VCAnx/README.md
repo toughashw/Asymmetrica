@@ -7,11 +7,6 @@
 sudo chmod +x vcanx-installer-2.9r3-linux-x64.sh
 ```
 
-> Install VCAnx 
-```
-sudo ./vcanx-installer-2.9r3-linux-x64.sh
-```
-
 > Install VCAnx Plugin
 ```
 sudo ./vcanx-installer-2.9r3-linux-x64.sh --plugin-only
