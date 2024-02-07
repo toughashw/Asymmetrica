@@ -2,6 +2,11 @@
 
 - Guide --> [https://nx.vcatechnology.com]
 
+> Execute .sh
+```
+sudo chmod +x vcanx-installer-2.9r3-linux-x64.sh
+```
+
 > Install VCAnx 
 ```
 sudo ./vcanx-installer-2.9r3-linux-x64.sh
@@ -27,19 +32,13 @@ sudo ./vcanx-installer-2.9r3-linux-x64.sh --both
 sudo snap install ./vcanx-config-installer-2.9.5.snap --dangerous
 ```
 
-> Install CUDA Toolkit 12.3
+> Install CUDA Toolkit 11.0
 ```
-wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/sbsa/cuda-keyring_1.1-1_all.deb
-sudo dpkg -i cuda-keyring_1.1-1_all.deb
+sudo wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/sbsa/cuda-ubuntu1804.pin
+sudo mv cuda-ubuntu1804.pin /etc/apt/preferences.d/cuda-repository-pin-600
+sudo wget https://developer.download.nvidia.com/compute/cuda/11.0.1/local_installers/cuda-repo-ubuntu1804-11-0-local_11.0.1-450.36.06-1_arm64.deb
+sudo dpkg -i cuda-repo-ubuntu1804-11-0-local_11.0.1-450.36.06-1_arm64.deb
+sudo apt-key add /var/cuda-repo-ubuntu1804-11-0-local/7fa2af80.pub
 sudo apt-get update
-sudo apt-get -y install cuda-toolkit-12-3
-```
-
-```
-sudo apt-get install -y cuda-drivers
-```
-
-```
-sudo apt-get install -y nvidia-kernel-open-545
-sudo apt-get install -y cuda-drivers-545
+sudo apt-get -y install cuda
 ```
