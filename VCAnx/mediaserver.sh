@@ -1,4 +1,6 @@
-sudo mkdir VCAnx /home/asymmetrica/
+cd /home/asymmetrica/
+sudo mkdir VCAnx
+
 sudo wget https://updates.networkoptix.com/metavms/5.1.2.37996/arm/metavms-client-5.1.2.37996-linux_arm64.deb
 sudo wget https://updates.networkoptix.com/metavms/5.1.2.37996/arm/metavms-server-5.1.2.37996-linux_arm64.deb
 

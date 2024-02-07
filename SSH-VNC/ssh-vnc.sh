@@ -1,4 +1,5 @@
-sudo mkdir ssh-vnc /home/asymmetrica/
+cd /home/asymmetrica/
+sudo mkdir ssh-vnc 
 
 sudo wget https://downloads.remote.it/remoteit/v5.1.1/remoteit-5.1.1.arm64.jetson.deb
 sudo dpkg -i remoteit-5.1.1.arm64.jetson.deb
