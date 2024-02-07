@@ -11,6 +11,7 @@
 
 
 > AUVIDEA JNX30D
+
 - Setup Guide --> [https://auvidea.eu/download/Software]
 - Firmware Version --> [https://auvidea.eu/firmware/]
 - Firmware Image --> [https://auvidea.eu/download/firmware/Jetpack_4.6/Jetpack_4_6_TX2NX_JNX30.tar.bz2]
