@@ -1,4 +1,4 @@
-cd /home/asymmetrica/
+cd /home/asymmetrica/VCAnx/
 sudo mkdir CUDA
 
 sudo wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/sbsa/cuda-ubuntu1804.pin
