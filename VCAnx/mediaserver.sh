@@ -13,6 +13,6 @@ sudo systemctl enable networkoptix-metavms-mediaserver.service
 sudo systemctl start networkoptix-metavms-mediaserver.service
 sudo systemctl status networkoptix-metavms-mediaserver.service
 
-sudo systemclt enable networkoptix-metavms-root-tool.service
-sudo systemclt start networkoptix-metavms-root-tool.service
-sudo systemclt status networkoptix-metavms-root-tool.service
+sudo systemctl enable networkoptix-metavms-root-tool.service
+sudo systemctl start networkoptix-metavms-root-tool.service
+sudo systemctl status networkoptix-metavms-root-tool.service
