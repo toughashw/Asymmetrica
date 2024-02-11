@@ -51,9 +51,9 @@ while True:
     oled.text("Hello, ESP32!", 0, 0)
     oled.show()
 
-bot = telepot.Bot('6041146609:AAEDVHZxIVlRE_uYHpUnK4du640WdKre3oo')
+bot = telepot.Bot('6910328263:AAFSaqnW6Gc9JXkonkqYAsemwAR591aEdOo')
 bot.message_loop(gestisci_messaggio)
 
-    # Aggiorna ogni 5 secondi
-while True:
+    # Aggiorna ogni 10 secondi
+
     time.sleep(10)

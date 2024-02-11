@@ -47,9 +47,9 @@ while True:
     if msg:
         uart.write(msg)
 
-bot = telepot.Bot('6041146609:AAEDVHZxIVlRE_uYHpUnK4du640WdKre3oo')
+bot = telepot.Bot('6910328263:AAFSaqnW6Gc9JXkonkqYAsemwAR591aEdOo')
 bot.message_loop(gestisci_messaggio)
 
     # Il tuo codice specifico può andare qui
-while True:
+
     time.sleep(10)
