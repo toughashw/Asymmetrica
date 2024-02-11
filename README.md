@@ -9,12 +9,17 @@
 - Setup Guide --> [https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-2gb-devkit#intro]
 - Firmware Image --> [https://developer.nvidia.com/jetson-nano-2gb-sd-card-image]
 
-
 > AUVIDEA JNX30D
 
+- Datasheet --> [https://auvidea.eu/download/manual/JNX30D/JNX30D_Manual.pdf]
 - Setup Guide --> [https://auvidea.eu/download/Software]
 - Firmware Version --> [https://auvidea.eu/firmware/]
 - Firmware Image --> [https://auvidea.eu/download/firmware/Jetpack_4.6/Jetpack_4_6_TX2NX_JNX30.tar.bz2]
+- Firmware Image --> [https://developer.nvidia.com/embedded/l4t/r32_release_v7.1/jp_4.6.1_b110_sd_card/jetson_xavier_nx/jetson-nx-jp461-sd-card-image.zip]
+
+```
+sudo ./flash jetson-xavier-nx-devkit-tx2-nx mmcblk0p1
+```
 
 Download & Installation
 ```
