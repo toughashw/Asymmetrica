@@ -1,4 +1,5 @@
 import time
+import telepot
 from machine import UART, Pin
 from umqtt.simple import MQTTClient
 
@@ -28,17 +29,27 @@ client = MQTTClient("ESP32Client", mqtt_server)
 client.connect()
 print("Connesso al broker MQTT")
 
+def gestisci_messaggio(messaggio):
+    chat_id = messaggio['chat']['id']
+    testo = messaggio['text']
+
 while True:
     # Leggi dalla porta seriale 2 e invia al broker MQTT
     if uart.any():
         data = uart.readall()
         client.publish("norvi/BM1-ES/test", data.decode('utf-8'))
 
+    # Esempio di pubblicazione su un topic Bot Telegram
+    bot.sendMessage(chat_id, 'Ciao dal tuo Norvi BM1-ES!')
+
     # Leggi dal broker MQTT e invia alla porta seriale 2
     msg = client.check_msg()
     if msg:
         uart.write(msg)
-    
+
+bot = telepot.Bot('6041146609:AAEDVHZxIVlRE_uYHpUnK4du640WdKre3oo')
+bot.message_loop(gestisci_messaggio)
+
     # Il tuo codice specifico può andare qui
-    
-    time.sleep(1)
+while True:
+    time.sleep(10)

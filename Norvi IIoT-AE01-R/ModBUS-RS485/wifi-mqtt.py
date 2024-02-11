@@ -1,6 +1,7 @@
 from machine import Pin, I2C
 from ssd1306 import SSD1306_I2C
 import time
+import telepot
 from umqtt.simple import MQTTClient
 import network
 
@@ -28,6 +29,10 @@ client = MQTTClient("ESP32Client", mqtt_server)
 client.connect()
 print("Connesso al broker MQTT")
 
+def gestisci_messaggio(messaggio):
+    chat_id = messaggio['chat']['id']
+    testo = messaggio['text']
+
 def publish_message(topic, message):
     client.publish(topic, message)
 
@@ -38,10 +43,17 @@ while True:
     # Esempio di pubblicazione su un topic MQTT
     publish_message("norvi/AE01-R/test", "Ciao dal tuo Norvi AE01-R!")
 
+    # Esempio di pubblicazione su un topic Bot Telegram
+    bot.sendMessage(chat_id, 'Ciao dal tuo Norvi AE01-R!')
+
     # Aggiorna il display OLED
     oled.fill(0)
     oled.text("Hello, ESP32!", 0, 0)
     oled.show()
 
+bot = telepot.Bot('6041146609:AAEDVHZxIVlRE_uYHpUnK4du640WdKre3oo')
+bot.message_loop(gestisci_messaggio)
+
     # Aggiorna ogni 5 secondi
-    time.sleep(5)
+while True:
+    time.sleep(10)
